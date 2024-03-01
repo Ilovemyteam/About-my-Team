@@ -19,7 +19,7 @@ export const feedbackData: FeedbackDataItem[] = [
     },
     {
         name: "Johns, Kirlin and Gerhold",
-        image: "https://loremflickr.com/640/480/cats",
+        image: "https://res.cloudinary.com/dryhnlf4u/image/upload/v1693237547/team/Posternak_desktop_2x_gvdsnc.jpg",
         siteView: "персональний сайт",
         description:
             "Ex amet vel labore saepe officia. Nihil dolor et. Laudantium sunt magnam labore minima ipsa libero fugiat commodi. Optio corrupti repudiandae fugiat quidem ullam. Nisi pariatur perspiciatis quo sequi.",
