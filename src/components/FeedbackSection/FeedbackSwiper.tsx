@@ -5,17 +5,9 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
-import feedbacks from "./feedbackData.json";
+import { feedbackData, FeedbackDataItem } from "./feedbackData";
 import Image from "next/image";
 
-interface FeedbackCard {
-    name: string;
-    image: string;
-    video?: string;
-    type: string;
-    discription: string;
-    id: string;
-}
 const FeedbackSwiper = () => {
     return (
         <div>
@@ -26,15 +18,14 @@ const FeedbackSwiper = () => {
                 spaceBetween={50}
                 slidesPerView={3}
             >
-                {feedbacks.map(
+                {feedbackData.map(
                     ({
                         image,
-
                         name,
-                        type,
+                        siteView,
                         id,
-                        discription,
-                    }: FeedbackCard) => (
+                        description,
+                    }: FeedbackDataItem) => (
                         <SwiperSlide key={id}>
                             <div>
                                 <h4>{name}</h4>
@@ -46,8 +37,8 @@ const FeedbackSwiper = () => {
                                         height: "100%",
                                     }}
                                 />
-                                <p>{type}</p>
-                                <p>{discription}</p>
+                                <p>{siteView}</p>
+                                <p>{description}</p>
                             </div>
                         </SwiperSlide>
                     )
