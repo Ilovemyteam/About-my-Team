@@ -39,7 +39,7 @@ const FeedbackSwiper = () => {
                                         src={video}
                                         frameBorder="0"
                                         allowFullScreen
-                                        width="100%"
+                                        width="50%"
                                         height="auto"
                                     />
                                 ) : (
