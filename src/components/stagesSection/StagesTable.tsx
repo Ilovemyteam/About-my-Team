@@ -56,6 +56,7 @@ export const StagesTable = () => {
                 [&:nth-child(5)]:hidden pc:[&:nth-child(5)]:block
                 tab:border
                 `}
+                isIconShown={false}
             />
         </Table>
     );
