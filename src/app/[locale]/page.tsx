@@ -12,7 +12,6 @@ export default function Home() {
             <MissionSection />
             <JoinTheTeamSection />
             <FeedbackSection />
-            <JoinTheTeamSection />
             <ServicesSection />
             <StagesSection />
             <OurTeamSection />

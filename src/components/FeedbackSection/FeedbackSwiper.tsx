@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 
 import "swiper/css";
-import * as feedbacks from "./feedbackData.json";
+import feedbacks from "./feedbackData.json";
 import Image from "next/image";
 
 interface FeedbackCard {
