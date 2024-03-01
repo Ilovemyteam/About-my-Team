@@ -1,4 +1,7 @@
 "use client";
+
+import { feedbackData } from "./feedbackData";
+
 // import { Swiper, SwiperSlide } from "swiper/react";
 // import { Navigation, Pagination } from "swiper/modules";
 
@@ -9,9 +12,10 @@
 // import Image from "next/image";
 
 const FeedbackSwiper = () => {
+    console.log(feedbackData);
     return (
         <div>
-            <h1>Swiper</h1>
+            <h1>Swiper Swiper</h1>
             {/* <Swiper
                 modules={[Navigation, Pagination]}
                 navigation
