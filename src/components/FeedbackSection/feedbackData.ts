@@ -53,7 +53,7 @@ export const feedbackData: FeedbackDataItem[] = [
     },
     {
         name: "Gulgowski, Adams and Watsica",
-        image: "https://loremflickr.com/cache/resized/65535_52739371103_565f7dde3f_z_640_480_nofilter.jpg",
+        image: "https://loremflickr.com/640/480/cats",
         siteView: "персональний сайт",
         description:
             "Reiciendis veniam quisquam animi fugit. Atque aperiam officia. Tenetur cum nulla. Voluptates ea magnam ratione eos repellat harum quam sint. Molestiae nisi officiis impedit dolor eos ducimus. Facere beatae occaecati aliquid.",

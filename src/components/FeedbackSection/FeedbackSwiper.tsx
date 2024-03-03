@@ -1,22 +1,18 @@
 "use client";
 
-import { feedbackData } from "./feedbackData";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Navigation, Pagination } from "swiper/modules";
-
-// import "swiper/css";
-// import "swiper/scss/navigation";
-// import "swiper/scss/pagination";
-// import { feedbackData, FeedbackDataItem } from "./feedbackData";
-// import Image from "next/image";
+import "swiper/css";
+import "swiper/scss/navigation";
+import "swiper/scss/pagination";
+import { feedbackData, FeedbackDataItem } from "./feedbackData";
+import Image from "next/image";
 
 const FeedbackSwiper = () => {
-    console.log(feedbackData);
     return (
         <div>
-            <h1>Swiper Swiper</h1>
-            {/* <Swiper
+            <Swiper
                 modules={[Navigation, Pagination]}
                 navigation
                 pagination={{ clickable: true }}
@@ -37,8 +33,8 @@ const FeedbackSwiper = () => {
                                 <Image
                                     src={image}
                                     alt={name}
-                                    sizes="50px, 100px"
-                                    fill
+                                    width={540}
+                                    height={312}
                                 />
                                 <p>{siteView}</p>
                                 <p>{description}</p>
@@ -46,7 +42,7 @@ const FeedbackSwiper = () => {
                         </SwiperSlide>
                     )
                 )}
-            </Swiper> */}
+            </Swiper>
         </div>
     );
 };
