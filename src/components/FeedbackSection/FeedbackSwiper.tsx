@@ -6,10 +6,12 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
-import { feedbackData, FeedbackDataItem } from "./feedbackData";
 import Image from "next/image";
+import { FeedbackData, FeedbackDataItem } from "./feedbackData";
 
 const FeedbackSwiper = () => {
+    const feedbackData = FeedbackData();
+
     return (
         <div>
             <Swiper
