@@ -24,10 +24,10 @@ const PortfolioCarouselVertical: React.FC<PropType> = props => {
     return (
         <section className="min-w-full">
             <div className="overflow-hidden -mx-4" ref={emblaRef}>
-                <div className="embla__container h-96 backface-hidden flex flex-col gap-4  bg-white">
+                <div className="embla__container h-96 backface-hidden flex flex-col gap-4 ">
                     {slides.map(index => (
                         <div
-                            className="embla__slide flex-[0_0_100%] "
+                            className="embla__slide flex-[0_0_100%]  bg-white "
                             key={index}
                         >
                             <div className="embla__slide__number">
