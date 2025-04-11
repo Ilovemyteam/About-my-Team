@@ -4,16 +4,33 @@
 
 :root {
     --color-grey: #d4d4d4;
-    --background-color: #1f0033;
     --font-geist: Geist;
+}
+
+/* styles for root element when modal open */
+:root:has(.no-doc-scroll) {
+    overflow: hidden;
+    /* padding-right: 17px; */
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background-color: #1f0033;
-        --color-grey: #d4d4d4;
+        overflow-x: hidden;
     }
 }
+
+/* Smooth animation during scroll */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+}
+
+/* //End scroll animation */
 
 a {
     text-decoration: none;
@@ -39,12 +56,64 @@ ul {
 
 body {
     color: var(--color-grey);
-    background-color: var(--background-color);
     font-family: var(--font-geist);
+    font-weight: 300;
 }
 
 @layer utilities {
     .text-balance {
         text-wrap: balance;
+    }
+}
+@layer components {
+    .icon-hover-rounded-purple {
+        @apply after:content-[''] after:absolute after:w-0 after:h-0 after:rounded-full after:bg-purple-stroke03
+         pc:transition-width pc:after:ease-in-out pc:after:duration-[600ms] after:blur-[2px];
+    }
+
+    .icon-hover-rounded-purple:hover {
+        @apply pc:after:h-full pc:after:w-full;
+    }
+
+    .icon-hover-rounded-purple:focus-visible {
+        @apply pc:after:h-full pc:after:w-full outline-none;
+    }
+
+    .icon-hover-rounded-purple:focus-within {
+        @apply pc:outline-none;
+    }
+    .icon-hover-rounded-purple:active {
+        @apply after:h-full after:w-full;
+    }
+    .slider-dot {
+        @apply appearance-none bg-transparent inline-flex cursor-pointer border border-red p-0 m-0 w-2 h-2 rounded-full;
+    }
+    .slider-dot--selected {
+        @apply bg-redLight dark:bg-red justify-center;
+    }
+
+    .scroll {
+        @apply scrollbar scrollbar-w-[3px] scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thumb-greyLight scrollbar-track-transparent;
+    }
+
+    .custom-autofill {
+        &:-webkit-autofill {
+            box-shadow: 0 0 0px 1000px transparent inset !important;
+            -webkit-text-fill-color: #5f3f87 !important;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+    }
+    .custom-autofill-default {
+        &:-webkit-autofill {
+            box-shadow: 0 0 0px 1000px transparent inset !important;
+            -webkit-text-fill-color: currentColor !important;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+    }
+    .bg-construction {
+        background-image: url("/images/under-construction.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
