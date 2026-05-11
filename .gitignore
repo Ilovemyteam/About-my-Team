@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 .yarn/install-state.gz
+.idea
+
 
 # testing
 /coverage
@@ -40,3 +42,7 @@ next-env.d.ts
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+
+# vscode
+.vscode
+/.vscode

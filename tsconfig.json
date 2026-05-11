@@ -29,7 +29,10 @@
         "**/*.tsx",
         "**/**/*.ts",
         "**/**/*.tsx",
-        ".next/types/**/*.ts"
+        ".next/types/**/*.ts",
+        "next-sitemap.config.js",
+        "src/components/eventsPage/SecondScene",
+        "custom.d.ts"
     ],
-    "exclude": ["node_modules"]
+    "exclude": ["node_modules", ".next"]
 }
